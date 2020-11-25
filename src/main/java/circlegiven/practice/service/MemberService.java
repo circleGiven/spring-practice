@@ -2,16 +2,18 @@ package circlegiven.practice.service;
 
 import circlegiven.practice.domain.Member;
 import circlegiven.practice.repository.MemberRepository;
-import circlegiven.practice.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Service
 public class MemberService {
 
     private final MemberRepository repository;
 
+    @Autowired
     public MemberService(MemberRepository repository) {
         this.repository = repository;
     }
